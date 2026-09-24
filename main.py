@@ -37,7 +37,7 @@ def home(request: Request):
             "name": "Application Portfolio Hub",
             "description": "A portfolio website presenting my skills, projects, and application materials, built with FastAPI and Jinja templates.",
             "technologies": ["Python", "FastAPI", "Jinja2", "HTML", "CSS"],
-            "github_url": None
+            "github_url": "https://github.com/xgrantrosales/application-portfolio-hub"
         }
     ]
     operations_skills = [
