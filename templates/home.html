@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{full_name}} | Portfolio</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <header>
+    <h1>{{full_name}}</h1>
+    <p>{{professional_title}}</p>
+    <p>Python | Backend Development | Process Automation</p>
+    </header>
+
+<main>
+
+    <section>
+    <h2>About Me</h2>
+    <p>I’m an operations and customer service professional with 11 years of experience in technical support, quality assurance, team leadership, and management, helping teams improve workflows, develop SOPs, and meet performance goals. I’m now building on that experience by learning Python backend development and creating practical projects with FastAPI and SQLite, with the goal of developing tools that simplify everyday business operations.
+</p>
+    </section>
+
+    <section>
+    <h2>Technical Skills</h2>
+    <ul class="skills-list">
+        {% for skill in technical_skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+    </section>
+
+    <section>
+    <h2>Operations & Customer Service Skills</h2>
+    <ul class="skills-list">
+        {% for ops_skill in operations_skills %}
+            <li>{{ops_skill}}</li>
+        {% endfor %}    
+    </ul>
+    </section>
+
+    <section>
+    <h2>Projects</h2>
+    {% for project in projects %}
+    <article class="project">
+    <h3>{{project["name"]}}</h3>
+    <p>{{project["description"]}}</p>
+
+    <ul class="skills-list">
+        {% for tech in project["technologies"] %}
+            <li>{{tech}}</li>
+        {% endfor %}    
+    </ul>
+    
+    {% if project["github_url"] %}
+    <a href="{{project['github_url']}}" target="_blank" rel="noopener">View on GitHub </a>
+    {% endif %}
+    </article>
+    {% endfor %}
+    </section>
+
+    <section>
+    <h2>Application Materials</h2>
+
+    <p>
+        <a href="/static/resume.pdf" class="button" target="_blank" rel="noopener">View Resume</a>
+    </p>
+
+    <p>
+        <a href="/static/cover-letter.pdf" class="button" target="_blank" rel="noopener"> View Cover Letter</a>
+    </p>
+
+    <p>
+        <a href="https://www.loom.com/share/1836cea7aaed4d6c868fa6a763b11abc" class="button" target="_blank" rel="noopener"> Watch Introduction Video</a>
+    </p>
+    </section>
+    
+    <section>
+    <h2>Professional Links</h2>
+    <p>
+        <a href="https://github.com/xgrantrosales" target="_blank" rel="noopener"> GitHub Profile</a>
+    </p>
+    </section>
+
+    <section>
+    <h2>Contact</h2>
+    <p>
+        <a href="mailto:ix1791ce@gmail.com">Email Me</a>
+    </p>
+    </section>
+
+</main>
+    
+    
+</body>
+</html>    
