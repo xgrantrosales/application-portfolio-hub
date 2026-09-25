@@ -38,6 +38,8 @@ A personal portfolio website built with FastAPI, Jinja2, HTML, and CSS to showca
 
 Install Python and download or clone this repository. Open a terminal in the project folder containing `main.py`.
 
+Developed and tested with Python 3.14.3.
+
 ### 1. Create a virtual environment
 
 On Windows:

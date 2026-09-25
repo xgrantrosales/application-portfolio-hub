@@ -81,3 +81,10 @@ section h2 {
     vertical-align: middle;
     margin-right: 6px;
 }
+
+.setup-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
